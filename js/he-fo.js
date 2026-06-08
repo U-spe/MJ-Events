@@ -14,13 +14,14 @@ document.addEventListener("DOMContentLoaded", () => {
                         MJ Events <span>& Designs</span>
                     </a>
                     <ul class="nav-links">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#gallery">Gallery</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="contact.html">Contact</a></li>
                     </ul>
-                    <a href="#" class="nav-button">Book Now</a>
+                    <a href="event-planner.html">AI Planner</a>
                 </div>
             </nav>
         `;
@@ -35,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     MJ Events <span>& Designs</span>
                 </div>
                 <p>Creating unforgettable moments, one celebration at a time.</p>
-                <p>© 2026 MJ Events & Designs. All Rights Reserved.</p>
+                <p>© 2026 MJ Events & Designs. All Rights Reserved. View Our README to see what we do with your information.</p>
             </div>
         `;
     }
