@@ -1,100 +1,131 @@
 /*
 =====================================================
             MJ EVENTS & DESIGNS
-     Interactive Services Styling Sheet (services.css)
+     Asymmetric Premium Services Layout (services.css)
 =====================================================
 */
 
 /* ===================================================
-   1. LAYOUT STRUCTURE UTILITY
+   1. GLOBAL SYSTEM SETUP
    =================================================== */
-.container-fluid {
-    width: min(1440px, 92%);
-    margin: auto;
+.editorial-container {
+    width: min(1300px, 90%);
+    margin: 0 auto;
 }
 
-/* ===================================================
-   2. HERO HEADER SETTING
-   =================================================== */
-.services-hero {
-    padding: 160px 0 70px 0;
-    text-align: center;
-    background: rgba(47, 94, 68, 0.02);
-    border-bottom: 1px solid rgba(47, 94, 68, 0.05);
-}
-
-.eyebrow-dispatch {
+.luxury-eyebrow {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
     color: #2f5e44;
     font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-size: 0.85rem;
-    display: inline-block;
-    margin-bottom: 14px;
-    font-family: 'Poppins', sans-serif;
+    display: block;
+    margin-bottom: 15px;
 }
 
-.services-hero h1 {
+.section-center-intro {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 70px auto;
+}
+
+.section-center-intro h2 {
     font-family: 'Playfair Display', serif;
-    font-size: 3.4rem;
+    font-size: 2.8rem;
     color: #1a3324;
-    margin: 0 0 20px 0;
-}
-
-.services-hero p {
-    font-family: 'Poppins', sans-serif;
-    color: #556b5c;
-    max-width: 620px;
-    margin: 0 auto;
-    font-size: 1.1rem;
-    line-height: 1.7;
+    margin: 0;
 }
 
 /* ===================================================
-   3. HIGH-END SERVICE INTERACTIVE MATRIX MESH
+   2. SECTION 1: ASYMMETRIC HERO LAYOUT
    =================================================== */
-.services-matrix-wrapper {
-    padding: 90px 0 120px 0;
-    background: #ffffff;
-}
-
-.services-interactive-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Pristine balanced 3-wide mesh */
-    gap: 35px;
-}
-
-/* Card Body Layout Frame */
-.service-card {
-    background: #ffffff;
-    border-radius: 16px;
+.premium-asymmetric-hero {
+    padding: 180px 0 100px 0;
+    background: linear-gradient(180px, rgba(47, 94, 68, 0.03) 0%, #ffffff 100%);
     overflow: hidden;
-    box-shadow: 0 10px 40px rgba(47, 94, 68, 0.04);
-    border: 1px solid rgba(47, 94, 68, 0.06);
-    display: flex;
-    flex-direction: column;
-
-    /* Wave entrance animation settings */
-    opacity: 0;
-    transform: translateY(45px);
-    animation: serviceEntrance 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-    animation-delay: calc(var(--card-order) * 0.1s);
-
-    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), 
-                box-shadow 0.5s ease, 
-                border-color 0.5s ease;
 }
 
-/* Image Slot Container Layout */
-.service-img-canvas {
-    width: 100%;
-    height: 240px; /* Rigid uniform frame boundary */
+.hero-split-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.hero-text-block h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 4rem;
+    line-height: 1.15;
+    color: #1a3324;
+    margin: 0 0 25px 0;
+}
+
+.hero-subtext {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.7;
+    color: #556b5c;
+    max-width: 540px;
+    margin: 0;
+}
+
+/* Fluid Geometric Image Architecture */
+.hero-accent-display {
     position: relative;
+}
+
+.abstract-geometry-frame {
+    width: 100%;
+    height: 480px;
+    border-radius: 40px 40px 200px 40px; /* Sophisticated asymmetric curve styling */
+    overflow: hidden;
+    box-shadow: 0 25px 55px rgba(26, 51, 36, 0.08);
+    border: 1px solid rgba(47, 94, 68, 0.1);
+}
+
+.geometric-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ===================================================
+   3. SECTION 2: EDITORIAL ALTERNATING SERVICES FEED
+   =================================================== */
+.alternating-services-feed {
+    padding: 60px 0 120px 0;
+    background: #ffffff;
+}
+
+.editorial-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 90px;
+    align-items: center;
+    margin-bottom: 140px;
+}
+
+.editorial-row:last-child {
+    margin-bottom: 0;
+}
+
+/* Image Mechanics */
+.editorial-media-canvas {
+    position: relative;
+    width: 100%;
+}
+
+.canvas-inner-wrapper {
+    width: 100%;
+    height: 520px;
+    border-radius: 24px;
     overflow: hidden;
     background: #1a3324;
+    box-shadow: 0 15px 40px rgba(47, 94, 68, 0.05);
 }
 
-.service-asset {
+.editorial-asset {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -102,126 +133,322 @@
     transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.service-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to bottom, rgba(26, 51, 36, 0) 40%, rgba(26, 51, 36, 0.45));
-    transition: opacity 0.4s ease;
-}
-
-/* Content Area Configuration Block */
-.service-content {
-    padding: 30px;
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-}
-
-.service-icon-label {
+/* Text Content Mechanics */
+.service-index-marker {
     font-family: 'Poppins', sans-serif;
-    font-size: 0.8rem;
-    text-transform: uppercase;
+    font-size: 0.85rem;
     font-weight: 600;
     color: #2f5e44;
-    letter-spacing: 1px;
-    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: block;
+    margin-bottom: 20px;
 }
 
-.service-content h3 {
+.editorial-text-panel h2 {
     font-family: 'Playfair Display', serif;
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     color: #1a3324;
-    margin: 0 0 14px 0;
-    line-height: 1.3;
+    margin: 0 0 20px 0;
+    line-height: 1.25;
 }
 
-.service-content p {
+.editorial-text-panel p {
     font-family: 'Poppins', sans-serif;
-    color: #627768;
+    color: #556b5c;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin: 0 0 35px 0;
+}
+
+.premium-action-btn {
+    font-family: 'Poppins', sans-serif;
     font-size: 0.95rem;
-    line-height: 1.6;
-    margin: 0 0 25px 0;
-    flex-grow: 1; /* Pushes the CTA arrow down perfectly straight */
-}
-
-/* Interactive CTA Link Elements */
-.service-arrow-link {
-    font-family: 'Poppins', sans-serif;
-    font-size: 0.9rem;
     font-weight: 600;
     color: #1a3324;
     text-decoration: none;
     display: inline-flex;
     align-items: center;
-    gap: 6px;
-    transition: color 0.3s ease;
+    gap: 8px;
+    border-bottom: 2px solid rgba(47, 94, 68, 0.2);
+    padding-bottom: 6px;
+    transition: color 0.3s ease, border-color 0.3s ease;
 }
 
-.service-arrow-link span {
+.premium-action-btn span {
     transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* ===================================================
-   4. KINETIC PHYSICS AND MOTION STATES (Hover Effects)
-   =================================================== */
-@keyframes serviceEntrance {
-    to {
-        opacity: 1;
-        transform: translateY(0);
+/* Reverse Order Modifiers */
+.editorial-row.layout-reversed .editorial-media-canvas {
+    grid-column: 2;
+}
+
+.editorial-row.layout-reversed .editorial-text-panel {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+/* Kinetic Motion Behaviors */
+@media (hover: hover) {
+    .editorial-row:hover .editorial-asset {
+        transform: scale(1.06);
     }
+    .premium-action-btn:hover {
+        color: #2f5e44;
+        border-color: #2f5e44;
+    }
+    .premium-action-btn:hover span {
+        transform: translateX(6px);
+    }
+}
+
+/* ===================================================
+   4. SECTION 3: IMPACT STATS
+   =================================================== */
+.brand-impact-counters {
+    background: #1a3324; /* Solid luxury brand tone */
+    padding: 80px 0;
+    color: #ffffff;
+}
+
+.impact-grid-mesh {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    text-align: center;
+}
+
+.metric-number {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    color: #ffffff;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.metric-label {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* ===================================================
+   5. SECTION 4: CURATED WORKFLOW TIMELINE
+   =================================================== */
+.curated-workflow-path {
+    padding: 120px 0;
+    background: rgba(47, 94, 68, 0.02);
+}
+
+.workflow-steps-horizontal {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.blueprint-step {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 16px;
+    border: 1px solid rgba(47, 94, 68, 0.06);
+    box-shadow: 0 10px 30px rgba(47, 94, 68, 0.02);
+}
+
+.step-badge {
+    display: inline-block;
+    padding: 6px 14px;
+    background: rgba(47, 94, 68, 0.08);
+    color: #2f5e44;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    border-radius: 30px;
+    margin-bottom: 20px;
+}
+
+.blueprint-step h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: #1a3324;
+    margin: 0 0 15px 0;
+}
+
+.blueprint-step p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #627768;
+    margin: 0;
+}
+
+/* ===================================================
+   6. SECTION 5: TIERED DESIGN SCHEMES
+   =================================================== */
+.tiered-pricing-marquee {
+    padding: 120px 0;
+    background: #ffffff;
+}
+
+.investment-row-mesh {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    align-items: stretch;
+}
+
+.investment-card {
+    border: 1px solid rgba(47, 94, 68, 0.1);
+    border-radius: 20px;
+    padding: 45px 35px;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.4s ease;
+}
+
+.premium-accented-card {
+    background: rgba(47, 94, 68, 0.03);
+    border: 2px solid #2f5e44;
+    transform: scale(1.03);
+}
+
+.card-tier-tag {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #556b5c;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.card-tier-tag.styled-highlight {
+    color: #2f5e44;
+}
+
+.investment-card h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: #1a3324;
+    margin: 0 0 15px 0;
+}
+
+.tier-desc {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #627768;
+    margin: 0 0 35px 0;
+}
+
+.tier-features-list {
+    margin: 0;
+    padding: 0 0 0 20px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+    color: #1a3324;
+    line-height: 2;
+}
+
+/* ===================================================
+   7. SECTION 6: EDITORIAL CLOSING HERO BANNER
+   =================================================== */
+.editorial-closing-banner {
+    padding: 0 0 120px 0;
+    background: #ffffff;
+}
+
+.banner-inner-card {
+    background: linear-gradient(135deg, #1a3324 0%, #2f5e44 100%);
+    padding: 80px 40px;
+    border-radius: 32px;
+    text-align: center;
+    color: #ffffff;
+    box-shadow: 0 20px 50px rgba(26, 51, 36, 0.15);
+}
+
+.banner-inner-card h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.2rem;
+    margin: 0 0 20px 0;
+}
+
+.banner-inner-card p {
+    font-family: 'Poppins', sans-serif;
+    max-width: 580px;
+    margin: 0 auto 40px auto;
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.6;
+}
+
+.luxury-solid-cta {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1a3324;
+    background: #ffffff;
+    padding: 18px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 @media (hover: hover) {
-    .service-card:hover {
-        transform: translateY(-8px);
-        border-color: rgba(47, 94, 68, 0.15);
-        box-shadow: 0 20px 45px rgba(26, 51, 36, 0.08);
-    }
-
-    .service-card:hover .service-asset {
-        transform: scale(1.08); /* Fluid high-end camera zoom effect */
-    }
-
-    .service-card:hover .service-arrow-link {
-        color: #2f5e44;
-    }
-
-    .service-card:hover .service-arrow-link span {
-        transform: translateX(5px); /* Slide arrow outward subtly */
+    .luxury-solid-cta:hover {
+        background: rgba(255, 255, 255, 0.95);
+        transform: translateY(-2px);
     }
 }
 
 /* ===================================================
-   5. RESPONSIVE SCALE MEDIA VIEWPORT QUERIES
+   8. RESPONSIVE VIEWPORT ENGINE BREAKPOINTS
    =================================================== */
-@media (max-width: 1024px) {
-    .services-interactive-grid {
-        grid-template-columns: repeat(2, 1fr); /* Scaled down beautifully to 2-columns on tablets */
+@media (max-width: 1100px) {
+    .hero-split-grid,
+    .editorial-row {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+    .editorial-row.layout-reversed .editorial-media-canvas {
+        grid-column: 1;
+    }
+    .editorial-row.layout-reversed .editorial-text-panel {
+        grid-column: 1;
+        grid-row: auto;
+    }
+    .canvas-inner-wrapper {
+        height: 400px;
+    }
+    .investment-row-mesh {
+        grid-template-columns: 1fr;
         gap: 30px;
     }
-    .services-hero h1 {
-        font-size: 2.8rem;
+    .premium-accented-card {
+        transform: scale(1);
+    }
+    .impact-grid-mesh {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
     }
 }
 
-@media (max-width: 680px) {
-    .services-interactive-grid {
-        grid-template-columns: 1fr; /* Pure premium mobile stream layouts */
+@media (max-width: 768px) {
+    .hero-text-block h1 {
+        font-size: 2.8rem;
+    }
+    .banner-inner-card h2 {
+        font-size: 2.2rem;
+    }
+    .editorial-text-panel h2 {
+        font-size: 2rem;
+    }
+    .workflow-steps-horizontal {
+        grid-template-columns: 1fr;
         gap: 25px;
-    }
-    .services-hero {
-        padding: 130px 0 50px 0;
-    }
-    .services-hero h1 {
-        font-size: 2.3rem;
-    }
-    .service-content {
-        padding: 24px;
-    }
-    .service-img-canvas {
-        height: 210px;
     }
 }
