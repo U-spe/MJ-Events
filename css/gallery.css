@@ -1,11 +1,21 @@
 /*
 =====================================================
             MJ EVENTS & DESIGNS
-       Asymmetrical Gallery Sheet (gallery.css)
+     Symmetrical 5x3 Gallery Sheet (gallery.css)
 =====================================================
 */
 
-/* 1. Hero Content & Filters Layout */
+/* ===================================================
+   1. GLOBAL FRAMEWORK & UTILITIES
+   =================================================== */
+.container-fluid {
+    width: min(1440px, 94%);
+    margin: auto;
+}
+
+/* ===================================================
+   2. HERO CONTENT & FILTERS LAYOUT
+   =================================================== */
 .gallery-hero {
     padding: 150px 0 60px 0;
     text-align: center;
@@ -75,45 +85,44 @@
     box-shadow: 0 6px 15px rgba(47, 94, 68, 0.2);
 }
 
-/* 2. Asymmetrical CSS Grid Masonry Engine */
+/* ===================================================
+   3. SYMMETRICAL 5x3 COLUMN GRID MATRIX
+   =================================================== */
 .exhibition-matrix-wrapper {
-    padding: 80px 0;
+    padding: 60px 0 100px 0;
     background: #ffffff;
 }
 
-.gallery-masonry-grid {
+.gallery-uniform-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 staggered irregular streams */
-    gap: 25px;
+    grid-template-columns: repeat(5, 1fr); /* Enforces the rigid 5-wide design */
+    gap: 20px;
 }
 
-/* Base Card Layout Rules */
+/* ===================================================
+   4. CARD STRUCTURAL LAYOUT & STAGGERED ENTRANCE
+   =================================================== */
 .matrix-card {
     position: relative;
-    border-radius: 12px;
+    height: 280px; /* Rigid height container keeps grid blocks uniform */
+    border-radius: 10px;
     overflow: hidden;
     background: #1a3324;
-    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-/* JavaScript Hook Classes for Active Filtering Transitions */
-.matrix-card.hidden {
+    
+    /* Entrance Animation Orchestration */
     opacity: 0;
-    transform: scale(0.8) translateY(30px);
-    position: absolute;
-    pointer-events: none;
-    visibility: hidden;
-    width: 0;
-    height: 0;
-    padding: 0;
-    margin: 0;
+    transform: translateY(40px);
+    animation: galleryEntrance 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    /* Uses inline --anim-order values to compute progressive wave offsets */
+    animation-delay: calc(var(--anim-order) * 0.06s);
+    
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), 
+                box-shadow 0.5s ease;
 }
 
-.matrix-card.visible {
-    opacity: 1;
-    transform: scale(1) translateY(0);
-    position: relative;
-    visibility: visible;
+/* JavaScript Hook Conditions for Active Sorting States */
+.matrix-card.hidden {
+    display: none; /* Collapses structural grid coordinates natively */
 }
 
 .card-inner-canvas {
@@ -125,46 +134,43 @@
 .canvas-asset {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover; /* Crops incoming data elegantly within uniform blocks */
     display: block;
-    transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
     background: linear-gradient(135deg, #2f5e44 0%, #1a3324 100%);
 }
 
-/* Minimalist Moving Interaction Overlay (No Titles) */
+/* Premium Contrast Shield Overlay */
 .interactive-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(26, 51, 36, 0.4);
+    background: rgba(26, 51, 36, 0.3);
     opacity: 0;
     transition: opacity 0.4s ease;
 }
 
-/* 3. Staggered Asymmetrical Heights Configurator */
-.size-short {
-    height: 280px;
+/* ===================================================
+   5. KEYFRAME ARCHITECTURE & INTERACTIVE KINETICS
+   =================================================== */
+@keyframes galleryEntrance {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-.size-medium {
-    height: 390px;
-}
-
-.size-tall {
-    height: 520px;
-}
-
-/* 4. Interaction Animations (Pure Image Motion) */
+/* Desktop Interaction Physics States */
 @media (hover: hover) {
     .matrix-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 15px 35px rgba(26, 51, 36, 0.15);
+        transform: translateY(-6px);
+        box-shadow: 0 12px 25px rgba(26, 51, 36, 0.15);
     }
     
     .matrix-card:hover .canvas-asset {
-        transform: scale(1.08);
+        transform: scale(1.07); /* Smooth contextual image zoom */
     }
     
     .matrix-card:hover .interactive-overlay {
@@ -172,24 +178,40 @@
     }
 }
 
-/* 5. Fluid Responsive Rescaling Breakpoints */
+/* ===================================================
+   6. RESPONSIVE SCALE-DOWN MEDIA QUERIES
+   =================================================== */
+@media (max-width: 1200px) {
+    .gallery-uniform-grid {
+        grid-template-columns: repeat(4, 1fr); /* Shrinks nicely to a 4-wide grid */
+    }
+    .matrix-card {
+        height: 250px;
+    }
+}
+
 @media (max-width: 991px) {
-    .gallery-masonry-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 staggered columns */
-        gap: 20px;
+    .gallery-uniform-grid {
+        grid-template-columns: repeat(3, 1fr); /* Shrinks to a 3-wide grid */
     }
     .gallery-hero h1 {
         font-size: 2.6rem;
     }
-    .size-tall {
-        height: 440px;
+}
+
+@media (max-width: 768px) {
+    .gallery-uniform-grid {
+        grid-template-columns: repeat(2, 1fr); /* Standard landscape mobile / portrait tablet look */
+        gap: 15px;
+    }
+    .matrix-card {
+        height: 230px;
     }
 }
 
-@media (max-width: 600px) {
-    .gallery-masonry-grid {
-        grid-template-columns: 1fr; /* 1 uniform stack on small mobile screens */
-        gap: 15px;
+@media (max-width: 480px) {
+    .gallery-uniform-grid {
+        grid-template-columns: 1fr; /* Continuous single-stream gallery stack for small phones */
     }
     .filter-control-dock {
         display: flex;
@@ -201,7 +223,7 @@
         padding: 8px 16px;
         font-size: 0.85rem;
     }
-    .size-short, .size-medium, .size-tall {
-        height: 320px; /* Uniform clean standard presentation profile on small frames */
+    .matrix-card {
+        height: 260px;
     }
 }
