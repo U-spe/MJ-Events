@@ -1,0 +1,227 @@
+/*
+=====================================================
+            MJ EVENTS & DESIGNS
+     Interactive Services Styling Sheet (services.css)
+=====================================================
+*/
+
+/* ===================================================
+   1. LAYOUT STRUCTURE UTILITY
+   =================================================== */
+.container-fluid {
+    width: min(1440px, 92%);
+    margin: auto;
+}
+
+/* ===================================================
+   2. HERO HEADER SETTING
+   =================================================== */
+.services-hero {
+    padding: 160px 0 70px 0;
+    text-align: center;
+    background: rgba(47, 94, 68, 0.02);
+    border-bottom: 1px solid rgba(47, 94, 68, 0.05);
+}
+
+.eyebrow-dispatch {
+    color: #2f5e44;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.85rem;
+    display: inline-block;
+    margin-bottom: 14px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.services-hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.4rem;
+    color: #1a3324;
+    margin: 0 0 20px 0;
+}
+
+.services-hero p {
+    font-family: 'Poppins', sans-serif;
+    color: #556b5c;
+    max-width: 620px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+/* ===================================================
+   3. HIGH-END SERVICE INTERACTIVE MATRIX MESH
+   =================================================== */
+.services-matrix-wrapper {
+    padding: 90px 0 120px 0;
+    background: #ffffff;
+}
+
+.services-interactive-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Pristine balanced 3-wide mesh */
+    gap: 35px;
+}
+
+/* Card Body Layout Frame */
+.service-card {
+    background: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(47, 94, 68, 0.04);
+    border: 1px solid rgba(47, 94, 68, 0.06);
+    display: flex;
+    flex-direction: column;
+
+    /* Wave entrance animation settings */
+    opacity: 0;
+    transform: translateY(45px);
+    animation: serviceEntrance 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    animation-delay: calc(var(--card-order) * 0.1s);
+
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), 
+                box-shadow 0.5s ease, 
+                border-color 0.5s ease;
+}
+
+/* Image Slot Container Layout */
+.service-img-canvas {
+    width: 100%;
+    height: 240px; /* Rigid uniform frame boundary */
+    position: relative;
+    overflow: hidden;
+    background: #1a3324;
+}
+
+.service-asset {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.service-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(26, 51, 36, 0) 40%, rgba(26, 51, 36, 0.45));
+    transition: opacity 0.4s ease;
+}
+
+/* Content Area Configuration Block */
+.service-content {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.service-icon-label {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #2f5e44;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+.service-content h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: #1a3324;
+    margin: 0 0 14px 0;
+    line-height: 1.3;
+}
+
+.service-content p {
+    font-family: 'Poppins', sans-serif;
+    color: #627768;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0 0 25px 0;
+    flex-grow: 1; /* Pushes the CTA arrow down perfectly straight */
+}
+
+/* Interactive CTA Link Elements */
+.service-arrow-link {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #1a3324;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: color 0.3s ease;
+}
+
+.service-arrow-link span {
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ===================================================
+   4. KINETIC PHYSICS AND MOTION STATES (Hover Effects)
+   =================================================== */
+@keyframes serviceEntrance {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (hover: hover) {
+    .service-card:hover {
+        transform: translateY(-8px);
+        border-color: rgba(47, 94, 68, 0.15);
+        box-shadow: 0 20px 45px rgba(26, 51, 36, 0.08);
+    }
+
+    .service-card:hover .service-asset {
+        transform: scale(1.08); /* Fluid high-end camera zoom effect */
+    }
+
+    .service-card:hover .service-arrow-link {
+        color: #2f5e44;
+    }
+
+    .service-card:hover .service-arrow-link span {
+        transform: translateX(5px); /* Slide arrow outward subtly */
+    }
+}
+
+/* ===================================================
+   5. RESPONSIVE SCALE MEDIA VIEWPORT QUERIES
+   =================================================== */
+@media (max-width: 1024px) {
+    .services-interactive-grid {
+        grid-template-columns: repeat(2, 1fr); /* Scaled down beautifully to 2-columns on tablets */
+        gap: 30px;
+    }
+    .services-hero h1 {
+        font-size: 2.8rem;
+    }
+}
+
+@media (max-width: 680px) {
+    .services-interactive-grid {
+        grid-template-columns: 1fr; /* Pure premium mobile stream layouts */
+        gap: 25px;
+    }
+    .services-hero {
+        padding: 130px 0 50px 0;
+    }
+    .services-hero h1 {
+        font-size: 2.3rem;
+    }
+    .service-content {
+        padding: 24px;
+    }
+    .service-img-canvas {
+        height: 210px;
+    }
+}
