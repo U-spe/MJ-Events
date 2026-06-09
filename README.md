@@ -1,27 +1,23 @@
-```markdown
 # ✨ MJ Events
-### *Creating Beautiful Moments, One Celebration at a Time.*
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Status-Active-success?style=for-the-badge">
-  <img src="https://img.shields.io/badge/Version-2026-blueviolet?style=for-the-badge">
-  <img src="https://img.shields.io/badge/Made%20With-Love-ff69b4?style=for-the-badge">
-  <img src="https://img.shields.io/badge/Built%20By-Web%20Creation%20Studios-4f46e5?style=for-the-badge">
-</p>
-
-<p align="center">
-  🌸 Elegant Design • 🎉 Memorable Events • 💍 Beautiful Celebrations • ✨ Custom Experiences
-</p>
+> **Creating Beautiful Moments, One Celebration at a Time.**
 
 ---
 
-# 🌷 Welcome
+**Status:** 🟢 Active
+**Version:** 2026
+**Project Type:** Event & Design Website
+**Developer:** Web Creation Studios (where applicable)
+
+---
+
+## 🌸 Welcome
 
 Welcome to the official repository for the **MJ Events** website and digital platform.
 
-This project represents the online presence of MJ Events and Designs, combining creativity, elegant design, and modern web development to showcase unforgettable event experiences.
+This project contains the website source code, design assets, and development resources that support the online presence of MJ Events and Designs.
 
-Whether you're exploring the code, reviewing project assets, or contributing to development, we're glad you're here.
+Whether you're browsing the code, contributing to development, or simply exploring the project, thank you for visiting.
 
 ---
 
@@ -31,229 +27,166 @@ Whether you're exploring the code, reviewing project assets, or contributing to 
 
 ---
 
-# 🌸 Our Mission
+## 💐 About This Project
 
-MJ Events believes every celebration deserves a unique touch.
+MJ Events is dedicated to creating memorable experiences through thoughtful event planning and elegant design.
 
-This repository supports that mission by providing the digital infrastructure that helps clients discover services, make inquiries, and connect with MJ Events.
+This repository serves as the digital foundation for that mission, supporting the website and related online services.
 
 ---
 
-# 🎀 Project Independence
+## 🎀 Project Independence
 
 MJ Events is an independent project developed for and on behalf of MJ Events and Designs.
 
-While portions of this platform may have been designed or maintained by Web Creation Studios, this repository:
+While portions of this website may have been designed or maintained by Web Creation Studios, this repository should not be interpreted as representing the policies or operations of Web Creation Studios.
 
-✅ Does represent MJ Events.
-
-❌ Does not represent the internal operations or policies of Web Creation Studios.
-
-Web Creation Studios serves solely as a development and technical partner where applicable.
+Web Creation Studios acts solely as the development and technical partner where applicable.
 
 ---
 
-# 💌 Information Collection
+## 💌 Information Collection
 
 This GitHub repository does not intentionally collect personal information.
 
-The live MJ Events website may collect information such as:
+The live MJ Events website may collect:
 
-✨ Contact Form Submissions
+* ✨ Contact form submissions
+* 📅 Event inquiries
+* 🎉 Booking requests
+* 📧 Email communications
+* 📊 Basic website analytics
 
-📅 Event Inquiries
-
-🎉 Booking Requests
-
-📧 Email Communications
-
-📊 Basic Website Analytics
-
-Information is collected solely for legitimate business operations and customer service purposes.
+Information is collected solely for legitimate business purposes and customer service.
 
 ---
 
-# 🌹 How Information May Be Used
+## 🌹 How Information Is Used
 
-Information submitted through MJ Events services may be used to:
+Information may be used to:
 
-• Respond to inquiries.
+* Respond to inquiries.
+* Schedule consultations.
+* Coordinate events.
+* Provide requested services.
+* Improve website functionality.
+* Maintain business records.
+* Share important updates.
 
-• Schedule consultations.
-
-• Coordinate event planning.
-
-• Deliver requested services.
-
-• Improve website functionality.
-
-• Maintain business records.
-
-• Provide important updates.
-
-MJ Events does not intentionally sell personal information to third parties.
+MJ Events does not intentionally sell personal information.
 
 ---
 
-# 🤝 Third Party Services
+## 🤝 Third Party Services
 
-The website may work alongside trusted third party services including:
+The website may integrate with:
 
-🌐 Hosting Providers
+* 🌐 Hosting providers
+* 🔗 Domain registrars
+* 📈 Analytics services
+* 📬 Email platforms
+* 📱 Social media services
+* 💳 Payment processors
 
-🔗 Domain Registrars
-
-📈 Analytics Platforms
-
-📬 Email Services
-
-📱 Social Media Platforms
-
-💳 Payment Processors
-
-Each provider maintains its own privacy and security policies.
+Each provider maintains its own privacy and security practices.
 
 ---
 
-# 🎨 Repository Usage
+## 🎨 Repository Usage
 
-We love sharing creativity, but we also protect original work.
+### ✅ You May
 
-### You May
+* View repository contents.
+* Learn from publicly available code.
+* Submit approved contributions where permitted.
 
-✅ Browse repository contents.
+### ❌ You May Not
 
-✅ Learn from publicly available code.
-
-✅ Submit approved contributions where permitted.
-
-### You May Not
-
-❌ Redistribute proprietary assets.
-
-❌ Copy MJ Events branding.
-
-❌ Claim ownership of original work.
-
-❌ Misrepresent affiliation with MJ Events or Web Creation Studios.
-
-❌ Remove copyright notices.
+* Redistribute proprietary assets.
+* Claim ownership of MJ Events branding.
+* Misrepresent affiliation with MJ Events or Web Creation Studios.
+* Remove copyright notices.
 
 ---
 
-# 🖼️ Intellectual Property
+## 🖼️ Intellectual Property
 
-Unless otherwise specified, original content remains the intellectual property of its respective owners.
+Unless otherwise stated, original materials remain the intellectual property of their respective owners.
 
-Protected materials include:
+This includes:
 
-🎨 Graphics
+* Website designs
+* Graphics
+* Branding
+* Written content
+* Custom code
+* Original layouts
 
-🌸 Branding
-
-📝 Written Content
-
-💻 Custom Code
-
-📐 Layout Designs
-
-🖥️ Website Design
-
-Commercial reproduction without permission is prohibited.
+Unauthorized commercial reproduction is prohibited.
 
 ---
 
-# 🔒 Security
+## 🔒 Security
 
-Reasonable efforts are made to maintain the security and integrity of this project.
+Reasonable efforts are made to maintain the integrity and security of this project.
 
-However, no digital platform can guarantee complete protection against:
+However, no digital platform can guarantee complete protection against unauthorized access or unforeseen vulnerabilities.
 
-• Unauthorized access
-
-• Service interruptions
-
-• Software vulnerabilities
-
-• Unexpected technical issues
-
-Users access repository contents at their own discretion.
+Use repository materials at your own discretion.
 
 ---
 
-# 🌍 External Links
+## 🌍 External Links
 
-MJ Events materials may contain links to external websites or third party services.
+MJ Events materials may include links to external websites and services.
 
-We are not responsible for:
-
-• External content
-
-• Third party privacy policies
-
-• External security practices
-
-• Service availability
+MJ Events and its developers are not responsible for the content or privacy practices of third party platforms.
 
 ---
 
-# ⚠️ Disclaimer
+## ⚠️ Disclaimer
 
-This repository is provided **"AS IS"** without warranties of any kind.
+This repository is provided **AS IS** without warranties of any kind.
 
 No guarantees are made regarding:
 
-✨ Continuous availability
+* Continuous availability.
+* Error free operation.
+* System compatibility.
+* Fitness for a particular purpose.
 
-✨ Error free operation
-
-✨ Universal compatibility
-
-✨ Fitness for any particular purpose
-
-Use of repository materials is at your own risk.
+Use repository materials at your own risk.
 
 ---
 
-# 📅 Policy Updates
+## 📅 Policy Updates
 
-As MJ Events grows and evolves, this document may be updated to reflect:
+This document may be updated periodically to reflect:
 
-🌸 Business changes
+* Business changes
+* Legal requirements
+* Technical improvements
+* Operational updates
 
-⚖️ Legal requirements
-
-🛠️ Technical improvements
-
-📈 Operational updates
-
-Continued use of this repository constitutes acceptance of the latest published version.
+Continued use of this repository constitutes acceptance of the latest version.
 
 ---
 
-# 💐 Contact
+## 💐 Contact
 
-Questions regarding the MJ Events website or repository should be directed to the appropriate project maintainers.
-
----
-
-# 🤍 Acknowledgement
-
-By accessing or using this repository, you acknowledge that you have:
-
-✅ Read this document.
-
-✅ Understood its contents.
-
-✅ Agreed to abide by its terms.
+For questions regarding the MJ Events website or repository, please contact the appropriate project maintainers.
 
 ---
 
-<p align="center">
+## 🤍 Acknowledgement
 
-## ✨ Thank You for Visiting MJ Events ✨
+By accessing or using this repository, you acknowledge that you have read, understood, and agreed to the terms outlined in this document.
 
-*"Turning ordinary moments into extraordinary memories."*
+---
+
+# ✨ Thank You for Visiting MJ Events
+
+*Turning ordinary moments into extraordinary memories.*
 
 🌸 🎉 💍 ✨ 🥂 🌷
 
@@ -262,6 +195,3 @@ By accessing or using this repository, you acknowledge that you have:
 **MJ Events © 2026. All Rights Reserved.**
 
 *Website and digital development by Web Creation Studios where applicable.*
-
-</p>
-```
