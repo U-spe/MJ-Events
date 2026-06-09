@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cancel Order | MJ Events & Designs</title>
+    <meta name="description" content="Submit a structural request to cancel or change your contract or event order.">
+    
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/cancel.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div id="global-header"></div>
+
+<main class="cancel-layout-wrapper">
+    <div class="cancel-container">
+        
+        <section class="cancel-intro text-center">
+            <span class="cancel-eyebrow">Order Support</span>
+            <h1>Request Order Cancellation</h1>
+            <p>Please provide your booking credentials below. Note that all design setups, structural materials, and calendar dates are subject to our contract retainer terms.</p>
+        </section>
+
+        <section class="cancel-form-card">
+            <form action="https://formspree.io/f/xbdeyorv" method="POST" id="order-cancel-form">
+                
+                <!-- Credentials Section -->
+                <div class="form-section-group">
+                    <h3 class="form-section-heading">1. Booking Credentials</h3>
+                    <div class="form-grid-2col">
+                        <div class="floating-input-group">
+                            <input type="text" id="order-number" name="order_number" required placeholder=" ">
+                            <label for="order-number">Order or Contract #</label>
+                        </div>
+                        <div class="floating-input-group">
+                            <input type="text" id="client-name" name="name" required placeholder=" ">
+                            <label for="client-name">Full Name</label>
+                        </div>
+                    </div>
+                    <div class="form-grid-1col">
+                        <div class="floating-input-group">
+                            <input type="email" id="client-email" name="email" required placeholder=" ">
+                            <label for="client-email">Email Address</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Logistics Section -->
+                <div class="form-section-group">
+                    <h3 class="form-section-heading">2. Cancellation Reason</h3>
+                    <div class="floating-input-group select-group">
+                        <select id="cancel-reason" name="cancel_reason" required>
+                            <option value="" disabled selected hidden></option>
+                            <option value="Event Postponed">Event Postponed / Rescheduled</option>
+                            <option value="Budget Changes">Budget Constraints / Scope Modification</option>
+                            <option value="Venue Conflict">Venue Restrictions or Logistics Conflict</option>
+                            <option value="Other">Other Reasons</option>
+                        </select>
+                        <label for="cancel-reason">Primary Reason</label>
+                    </div>
+
+                    <div class="floating-input-group" style="margin-top: 20px;">
+                        <textarea id="cancel-notes" name="cancellation_details" rows="5" required placeholder=" "></textarea>
+                        <label for="cancel-notes">Please elaborate briefly on the adjustments needed...</label>
+                    </div>
+                </div>
+
+                <!-- Terms Acceptance -->
+                <div class="form-section-group checkbox-group-container">
+                    <label class="custom-checkbox-label">
+                        <input type="checkbox" id="terms-confirm" name="acknowledge_policy" required>
+                        <span class="checkbox-box"></span>
+                        <span class="checkbox-text">I acknowledge that retainers are non-refundable and changing dates depends on the studio schedule.</span>
+                    </label>
+                </div>
+
+                <!-- Submit Engine -->
+                <div class="form-submit-container">
+                    <button type="submit" class="cancel-submit-btn">
+                        Submit Cancellation Request
+                    </button>
+                </div>
+
+            </form>
+        </section>
+
+    </div>
+</main>
+
+<div id="global-footer"></div>
+
+<script src="js/he-fo.js"></script>
+<script src="js/cancel.js"></script>
+</body>
+</html>
