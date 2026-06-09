@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Our Studio | MJ Events & Designs</title>
+    <meta name="description" content="Get in touch with our design studio based in Smyrna, Delaware. We are ready to bring your bespoke event vision to life.">
+    
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/contact.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header id="global-header"></header>
+
+<!-- BREADCRUMBS -->
+<nav class="page-breadcrumbs">
+    <div class="contact-container">
+        <a href="index.html">Home</a> <span class="divider">/</span> 
+        <span class="current">Contact Us</span>
+    </div>
+</nav>
+
+<main class="contact-layout">
+    
+    <!-- SECTION 1: HERO & INTRODUCTION -->
+    <section class="contact-hero-section">
+        <div class="contact-container text-center">
+            <span class="eyebrow-text">Get in Touch</span>
+            <h1>Let's Build Something Extraordinary.</h1>
+            <p class="hero-subtext">Whether you have a fully formed vision or just a concept, our team is ready to conceptualize, design, and execute your next milestone.</p>
+        </div>
+    </section>
+
+    <div class="contact-container">
+        <div class="contact-grid">
+            
+            <!-- LEFT COLUMN: INFO, LOCATION & PROCESS -->
+            <div class="contact-details-column">
+                
+                <!-- SECTION 2: DELAWARE LOCATION & CONTACT METHODS -->
+                <section class="info-cards-section">
+                    <h3>Studio HQ</h3>
+                    <div class="info-card">
+                        <div class="card-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                        </div>
+                        <div class="card-text">
+                            <strong>Smyrna, Delaware</strong>
+                            <span>Proudly serving the First State, executing premier events across Smyrna, Middletown, and the greater tri-state region.</span>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="card-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                        </div>
+                        <div class="card-text">
+                            <strong>Direct Inquiries</strong>
+                            <span>hello@mjeventsdesigns.com</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECTION 3: THE PROCESS / FAQ -->
+                <section class="process-section">
+                    <h3>What Happens Next?</h3>
+                    <div class="faq-accordion-wrapper">
+                        <details class="faq-accordion" open>
+                            <summary>1. Studio Review</summary>
+                            <div class="accordion-content">
+                                <p>Our design team reviews your inquiry within 24-48 business hours to assess timeline viability and conceptual alignment.</p>
+                            </div>
+                        </details>
+                        <details class="faq-accordion">
+                            <summary>2. Discovery Consultation</summary>
+                            <div class="accordion-content">
+                                <p>We schedule a brief introductory call to discuss aesthetic targets, baseline budget frameworks, and venue logistics.</p>
+                            </div>
+                        </details>
+                        <details class="faq-accordion">
+                            <summary>3. Proposal & Blueprint</summary>
+                            <div class="accordion-content">
+                                <p>If aligned, we generate a bespoke production proposal outlining structural designs, costs, and execution timelines.</p>
+                            </div>
+                        </details>
+                    </div>
+                </section>
+
+            </div>
+
+            <!-- RIGHT COLUMN: THE FORM -->
+            <div class="contact-form-column">
+                
+                <!-- SECTION 4: INTERACTIVE FORMSPREE PORTAL -->
+                <section class="form-section-wrapper">
+                    <div class="form-header">
+                        <h2>Send a Message</h2>
+                        <p>Prefer to start a general dialogue before shopping packages? Drop us a note below.</p>
+                    </div>
+
+                    <form action="https://formspree.io/f/xbdeyorv" method="POST" id="studio-contact-form">
+                        
+                        <div class="input-grid">
+                            <div class="input-group">
+                                <input type="text" id="contact-name" name="name" required placeholder=" ">
+                                <label for="contact-name">First & Last Name</label>
+                            </div>
+                            <div class="input-group">
+                                <input type="email" id="contact-email" name="email" required placeholder=" ">
+                                <label for="contact-email">Email Address</label>
+                            </div>
+                        </div>
+
+                        <div class="input-group full-width">
+                            <input type="text" id="contact-subject" name="subject" required placeholder=" ">
+                            <label for="contact-subject">Subject / Event Type</label>
+                        </div>
+
+                        <div class="input-group full-width">
+                            <textarea id="contact-message" name="message" rows="5" required placeholder=" "></textarea>
+                            <label for="contact-message">How can we help bring your vision to life?</label>
+                        </div>
+
+                        <button type="submit" class="submit-action-btn">
+                            Send Message to Studio
+                        </button>
+                        
+                        <p class="privacy-note">Your information is securely encrypted and never shared. By submitting, you agree to our studio communication policies.</p>
+                    </form>
+                </section>
+
+            </div>
+
+        </div>
+    </div>
+</main>
+
+<footer id="global-footer"></footer>
+
+<script src="js/he-fo.js"></script>
+<script src="js/contact.js"></script>
+</body>
+</html>
