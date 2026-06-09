@@ -1,0 +1,246 @@
+/* Core Structural Reset & Layout Base */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f6f8fa;
+    color: #24292f;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+}
+
+.license-wrapper {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 80px 24px;
+}
+
+.license-card {
+    background-color: #ffffff;
+    border: 1px solid #d0d7de;
+    border-radius: 12px;
+    padding: 60px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.02);
+}
+
+/* Typography Elements */
+.license-header h1 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 2.25rem;
+    color: #1f2328;
+    margin: 0 0 32px 0;
+    line-height: 1.25;
+    font-weight: 600;
+}
+
+.license-badge {
+    display: inline-block;
+    background-color: #eff1f3;
+    color: #444950;
+    font-size: 0.78rem;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 12px;
+}
+
+h2 {
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: #1f2328;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #1f2328;
+    margin-top: 0;
+    margin-bottom: 18px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #eaeef2;
+}
+
+h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #24292f;
+    margin: 24px 0 12px 0;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 16px;
+    color: #3b424a;
+}
+
+a {
+    color: #0969da;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.license-divider {
+    height: 1px;
+    background-color: #d0d7de;
+    border: none;
+    margin: 45px 0;
+}
+
+/* Notice Blocks & Callouts */
+.license-notice-box {
+    background-color: #fff8eb;
+    border-left: 4px solid #d4a314;
+    border-radius: 0 8px 8px 0;
+    padding: 24px;
+    margin-bottom: 40px;
+}
+
+.license-notice-box p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #533f03;
+    line-height: 1.6;
+}
+
+.considerations-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 24px;
+}
+
+.consideration-item h3 {
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #57606a;
+    border-bottom: none;
+    margin-bottom: 10px;
+}
+
+.consideration-item p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+/* Custom Ordered List Structure */
+.license-section {
+    margin-top: 40px;
+}
+
+.definitions-list {
+    list-style-type: lower-alpha;
+    padding-left: 20px;
+}
+
+.definitions-list li {
+    margin-bottom: 14px;
+    padding-left: 6px;
+}
+
+/* Nested Clause Identifiers */
+.nested-level-1 {
+    list-style-type: decimal;
+    padding-left: 24px;
+}
+
+.nested-level-1 > li {
+    margin-bottom: 18px;
+}
+
+.nested-level-2 {
+    list-style-type: lower-alpha;
+    padding-left: 24px;
+    margin-top: 10px;
+}
+
+.nested-level-2 > li {
+    margin-bottom: 10px;
+}
+
+.nested-level-3 {
+    list-style-type: lower-roman;
+    padding-left: 24px;
+    margin-top: 10px;
+}
+
+.nested-level-3 > li {
+    margin-bottom: 8px;
+}
+
+/* Fallback letter layout for alternative sections */
+.nested-level-1.alpha {
+    list-style-type: lower-alpha;
+}
+
+.license-clarification {
+    font-size: 0.92rem;
+    font-weight: 500;
+    color: #57606a;
+    margin-top: 12px;
+}
+
+/* Legal Disclaimer Box (Section 5 Caps text) */
+.legal-disclaimer-block {
+    background-color: #fafbfc;
+    border: 1px solid #e1e4e8;
+    border-radius: 8px;
+    padding: 24px;
+    margin-bottom: 20px;
+}
+
+.caps-legal {
+    font-size: 0.82rem;
+    letter-spacing: 0.2px;
+    line-height: 1.7;
+    color: #444d56;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+.caps-legal:last-child {
+    margin-bottom: 0;
+}
+
+/* Postscript Info Layout */
+.license-postscript p {
+    font-size: 0.88rem;
+    color: #57606a;
+    line-height: 1.6;
+}
+
+.cc-contact {
+    margin-top: 16px;
+    font-weight: 500;
+}
+
+/* Responsive Adaptive Controls */
+@media (max-width: 768px) {
+    .license-wrapper {
+        padding: 40px 16px;
+    }
+    
+    .license-card {
+        padding: 30px 20px;
+    }
+    
+    .considerations-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .license-header h1 {
+        font-size: 1.75rem;
+    }
+}
