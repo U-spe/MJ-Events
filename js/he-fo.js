@@ -1,10 +1,20 @@
 /**
  * MJ Events & Designs - Header & Footer Plugin (he-fo.js)
- * Injects HTML structure and CSS dynamically.
+ * Injects HTML structure, CSS, and favicon dynamically.
  */
 
 document.addEventListener("DOMContentLoaded", () => {
-    // 1. Inject Styles into the <head>
+    // 1. Inject Favicon
+    let favicon = document.querySelector("link[rel~='icon']");
+    if (!favicon) {
+        favicon = document.createElement('link');
+        favicon.rel = 'icon';
+        favicon.type = 'image/x-icon';
+        document.head.appendChild(favicon);
+    }
+    favicon.href = 'images/logos/favicon.ico';
+
+    // 2. Inject Styles into the <head>
     const style = document.createElement('style');
     style.textContent = `
         /* Footer Container */
@@ -31,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
     `;
     document.head.appendChild(style);
 
-    // 2. Inject Header
+    // 3. Inject Header
     const headerContainer = document.getElementById("global-header");
     if (headerContainer) {
         headerContainer.innerHTML = `
@@ -52,7 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
         `;
     }
 
-    // 3. Inject Footer
+    // 4. Inject Footer
     const footerContainer = document.getElementById("global-footer");
     if (footerContainer) {
         footerContainer.innerHTML = `
