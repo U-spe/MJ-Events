@@ -1,0 +1,320 @@
+/*
+=====================================================
+            MJ EVENTS & DESIGNS
+     Premium Contact Page Styling (contact.css)
+=====================================================
+*/
+
+/* ===================================================
+   1. GLOBAL RESET & BREADCRUMBS
+   =================================================== */
+body {
+    background-color: #ffffff;
+    color: #121212;
+}
+
+.contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.page-breadcrumbs {
+    padding: 120px 0 20px 0;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    color: #757575;
+}
+
+.page-breadcrumbs a {
+    color: #757575;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.page-breadcrumbs a:hover { color: #121212; }
+.page-breadcrumbs .divider { margin: 0 8px; color: #e0e0e0; }
+.page-breadcrumbs .current { color: #121212; font-weight: 500; }
+
+/* ===================================================
+   2. HERO SECTION (SECTION 1)
+   =================================================== */
+.contact-hero-section {
+    padding: 60px 0 80px 0;
+}
+
+.text-center {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.eyebrow-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #757575;
+    margin-bottom: 15px;
+    display: block;
+    font-weight: 600;
+}
+
+.contact-hero-section h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.2rem;
+    color: #121212;
+    margin: 0 0 20px 0;
+    line-height: 1.15;
+}
+
+.hero-subtext {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.05rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* ===================================================
+   3. GRID ARCHITECTURE
+   =================================================== */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 80px;
+    align-items: start;
+    padding-bottom: 120px;
+}
+
+.contact-details-column {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+/* ===================================================
+   4. INFO & LOCATION CARDS (SECTION 2)
+   =================================================== */
+.info-cards-section h3, .process-section h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    color: #121212;
+    margin: 0 0 25px 0;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.info-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.card-icon {
+    width: 45px;
+    height: 45px;
+    background: #f8f8f8;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: #121212;
+}
+
+.card-text {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Inter', sans-serif;
+}
+
+.card-text strong {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #121212;
+    margin-bottom: 4px;
+}
+
+.card-text span {
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* ===================================================
+   5. FAQ / PROCESS ACCORDIONS (SECTION 3)
+   =================================================== */
+.faq-accordion {
+    border-bottom: 1px solid #eaeaea;
+    padding: 18px 0;
+}
+
+.faq-accordion summary {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #121212;
+}
+
+.faq-accordion summary::after {
+    content: '+';
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: #757575;
+}
+
+.faq-accordion[open] summary::after { content: '−'; }
+
+.faq-accordion .accordion-content {
+    padding-top: 12px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* ===================================================
+   6. CONTACT FORM PORTAL (SECTION 4)
+   =================================================== */
+.form-section-wrapper {
+    background: #fafafa;
+    border: 1px solid #eaeaea;
+    border-radius: 12px;
+    padding: 40px;
+}
+
+.form-header {
+    margin-bottom: 30px;
+}
+
+.form-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: #121212;
+    margin: 0 0 10px 0;
+}
+
+.form-header p {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    color: #555;
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* Floating Label Form Engineering */
+.input-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.input-group {
+    position: relative;
+    width: 100%;
+}
+
+.input-group.full-width {
+    margin-bottom: 15px;
+}
+
+.input-group input, 
+.input-group textarea {
+    width: 100%;
+    padding: 24px 16px 10px 16px;
+    border: 1px solid #d9d9d9;
+    border-radius: 6px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    background: #ffffff;
+    color: #121212;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.input-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.input-group input:focus, 
+.input-group textarea:focus {
+    border-color: #121212;
+    box-shadow: 0 0 0 1px #121212;
+}
+
+.input-group label {
+    position: absolute;
+    left: 16px;
+    top: 18px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    color: #757575;
+    pointer-events: none;
+    transition: all 0.2s ease;
+    margin: 0;
+}
+
+/* Triggers floating state on focus or when containing text */
+.input-group input:focus ~ label,
+.input-group input:not(:placeholder-shown) ~ label,
+.input-group textarea:focus ~ label,
+.input-group textarea:not(:placeholder-shown) ~ label {
+    top: 8px;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.submit-action-btn {
+    width: 100%;
+    background: #121212;
+    color: #ffffff;
+    border: none;
+    padding: 18px;
+    margin-top: 10px;
+    border-radius: 6px;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.1s ease, background 0.2s ease;
+}
+
+.submit-action-btn:hover { background: #2a2a2a; }
+.submit-action-btn:active { transform: scale(0.98); }
+
+.privacy-note {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem;
+    color: #757575;
+    text-align: center;
+    margin: 20px 0 0 0;
+    line-height: 1.5;
+}
+
+/* ===================================================
+   7. RESPONSIVE MEDIA QUERIES
+   =================================================== */
+@media (max-width: 950px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+    .contact-form-column {
+        order: -1; /* Puts the form above the details on mobile */
+    }
+}
+
+@media (max-width: 600px) {
+    .contact-container { padding: 0 20px; }
+    .contact-hero-section h1 { font-size: 2.4rem; }
+    .input-grid { grid-template-columns: 1fr; }
+    .form-section-wrapper { padding: 30px 20px; }
+}
