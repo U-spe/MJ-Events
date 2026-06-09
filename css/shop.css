@@ -1,0 +1,484 @@
+/*
+=====================================================
+            MJ EVENTS & DESIGNS
+     E-Commerce Product Experience (shop.css)
+=====================================================
+*/
+
+/* ===================================================
+   1. GLOBAL E-COM RESET & BREADCRUMBS
+   =================================================== */
+body {
+    background-color: #ffffff;
+    color: #121212;
+}
+
+.shop-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.shop-breadcrumbs {
+    padding: 120px 0 20px 0;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    color: #757575;
+}
+
+.shop-breadcrumbs a {
+    color: #757575;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.shop-breadcrumbs a:hover {
+    color: #121212;
+}
+
+.shop-breadcrumbs .divider {
+    margin: 0 8px;
+    color: #e0e0e0;
+}
+
+.shop-breadcrumbs .current {
+    color: #121212;
+    font-weight: 500;
+}
+
+/* ===================================================
+   2. MAIN GRID LAYOUT
+   =================================================== */
+.ecom-product-layout {
+    padding: 20px 0 100px 0;
+}
+
+.ecom-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 60px;
+    align-items: start;
+}
+
+/* ===================================================
+   3. LEFT COLUMN: MEDIA GALLERY
+   =================================================== */
+.product-media-gallery {
+    position: sticky;
+    top: 100px; /* Sticks during scroll like Shopify */
+}
+
+.main-image-frame {
+    border-radius: 8px;
+    overflow: hidden;
+    background: #f5f5f5;
+    margin-bottom: 16px;
+}
+
+.main-image-frame img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4/5;
+    object-fit: cover;
+    display: block;
+}
+
+.thumbnail-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-bottom: 40px;
+}
+
+.thumb-btn {
+    border: 1px solid transparent;
+    padding: 0;
+    border-radius: 6px;
+    overflow: hidden;
+    cursor: pointer;
+    background: #f5f5f5;
+    transition: border-color 0.2s ease;
+}
+
+.thumb-btn img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    display: block;
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
+}
+
+.thumb-btn:hover img { opacity: 1; }
+
+.thumb-btn.active {
+    border-color: #121212;
+}
+.thumb-btn.active img {
+    opacity: 1;
+}
+
+/* Accordions */
+.product-accordion {
+    border-top: 1px solid #e0e0e0;
+    padding: 20px 0;
+}
+.product-accordion:last-child {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.product-accordion summary {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product-accordion summary::after {
+    content: '+';
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+.product-accordion[open] summary::after {
+    content: '−';
+}
+
+.accordion-content {
+    padding-top: 15px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* ===================================================
+   4. RIGHT COLUMN: PRODUCT CONFIGURATOR
+   =================================================== */
+.product-configurator {
+    display: flex;
+    flex-direction: column;
+}
+
+.vendor-tag {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #757575;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.product-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    color: #121212;
+    margin: 0 0 15px 0;
+    line-height: 1.1;
+}
+
+.dynamic-price-display {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #121212;
+    margin-bottom: 5px;
+}
+
+.tax-shipping-note {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    color: #757575;
+    margin: 0 0 40px 0;
+}
+
+.config-section {
+    margin-bottom: 35px;
+}
+
+.section-title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 12px;
+}
+
+.config-section label {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #121212;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.selected-variant-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Variant Pills (Radio Buttons) */
+.variant-pill-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.variant-pill {
+    position: relative;
+    cursor: pointer;
+}
+
+.variant-pill input {
+    position: absolute;
+    opacity: 0;
+}
+
+.pill-ui {
+    display: block;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    padding: 12px 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 40px;
+    color: #555;
+    background: #ffffff;
+    transition: all 0.2s ease;
+}
+
+.variant-pill:hover .pill-ui {
+    border-color: #121212;
+}
+
+.variant-pill input:checked ~ .pill-ui {
+    border-color: #121212;
+    background: #121212;
+    color: #ffffff;
+}
+
+/* Upsell Checklist (Addons) */
+.upsell-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.upsell-card {
+    position: relative;
+    cursor: pointer;
+}
+
+.upsell-card input {
+    position: absolute;
+    opacity: 0;
+}
+
+.upsell-ui {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #e0e0e0;
+    padding: 16px 20px;
+    border-radius: 8px;
+    background: #ffffff;
+    transition: all 0.2s ease;
+}
+
+.upsell-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.upsell-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #121212;
+}
+
+.upsell-price {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    color: #757575;
+    margin-top: 4px;
+}
+
+.upsell-action-btn {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 6px 16px;
+    border-radius: 30px;
+    background: #f5f5f5;
+    color: #121212;
+    transition: all 0.2s ease;
+}
+
+.upsell-card:hover .upsell-ui {
+    border-color: #9e9e9e;
+}
+
+.upsell-card input:checked ~ .upsell-ui {
+    border-color: #121212;
+    background: #fafafa;
+}
+
+.upsell-card input:checked ~ .upsell-ui .upsell-action-btn {
+    background: #121212;
+    color: #ffffff;
+}
+.upsell-card input:checked ~ .upsell-ui .upsell-action-btn::after {
+    content: 'ed'; /* Turns "Add" into "Added" */
+}
+
+/* Checkout Details Box */
+.checkout-details-box {
+    background: #fafafa;
+    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 30px;
+}
+
+.checkout-details-box h3 {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.1rem;
+    color: #121212;
+    margin: 0 0 20px 0;
+}
+
+/* Floating Label Inputs (Shopify Standard) */
+.input-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.input-group {
+    position: relative;
+    width: 100%;
+}
+
+.input-group.full-width {
+    margin-bottom: 15px;
+}
+
+.input-group input, 
+.input-group textarea {
+    width: 100%;
+    padding: 22px 14px 10px 14px;
+    border: 1px solid #d9d9d9;
+    border-radius: 6px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    background: #ffffff;
+    color: #121212;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.input-group textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.input-group input:focus, 
+.input-group textarea:focus {
+    border-color: #121212;
+    box-shadow: 0 0 0 1px #121212;
+}
+
+.input-group label {
+    position: absolute;
+    left: 14px;
+    top: 16px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    color: #757575;
+    pointer-events: none;
+    transition: all 0.2s ease;
+    margin: 0;
+}
+
+/* Trigger floating label on focus OR when not empty placeholder */
+.input-group input:focus ~ label,
+.input-group input:not(:placeholder-shown) ~ label,
+.input-group textarea:focus ~ label,
+.input-group textarea:not(:placeholder-shown) ~ label,
+.active-label {
+    top: 6px;
+    font-size: 0.75rem;
+}
+
+/* Primary Action Button */
+.add-to-cart-btn {
+    width: 100%;
+    background: #121212;
+    color: #ffffff;
+    border: none;
+    padding: 20px;
+    border-radius: 6px;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.1s ease, background 0.2s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.add-to-cart-btn:hover {
+    background: #2a2a2a;
+}
+
+.add-to-cart-btn:active {
+    transform: scale(0.98);
+}
+
+.trust-badges {
+    text-align: center;
+    margin-top: 15px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.8rem;
+    color: #757575;
+}
+
+.trust-badges span {
+    margin: 0 4px;
+}
+
+/* ===================================================
+   5. RESPONSIVE BREAKPOINTS
+   =================================================== */
+@media (max-width: 1024px) {
+    .ecom-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    .product-media-gallery {
+        position: relative;
+        top: 0;
+    }
+    .shop-container { padding: 0 20px; }
+}
+
+@media (max-width: 600px) {
+    .input-grid {
+        grid-template-columns: 1fr;
+    }
+    .product-header h1 {
+        font-size: 2.2rem;
+    }
+    .pill-ui {
+        padding: 10px 16px;
+        font-size: 0.85rem;
+    }
+}
