@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investment Frameworks | MJ Events & Designs</title>
+    <meta name="description" content="Explore transparent custom experience packages tailored precisely to your attendance metrics and event styling scale.">
+    
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/pricing.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header id="global-header"></header>
+
+<main>
+
+    <!-- =====================================================
+    SECTION 1: HERO & CONTROLLER INTERACTION BLOCK
+    ===================================================== -->
+    <section class="pricing-hero">
+        <div class="pricing-container">
+            <span class="luxury-eyebrow">Investment Guide</span>
+            <h1>Tailored Experiences, Transparent Pricing</h1>
+            <p class="hero-subtext">Adjust the capacity slider below to match your estimated guest count. Our smart matrix will recommend the perfect tier for your logistics requirements.</p>
+            
+            <!-- Dynamic Range Component Container -->
+            <div class="slider-control-hub">
+                <div class="slider-label-row">
+                    <span class="slider-title">Estimated Attendance:</span>
+                    <span class="slider-value-badge" id="guest-count-badge">120 Guests</span>
+                </div>
+                <div class="range-slider-wrapper">
+                    <input type="range" id="guest-slider" min="10" max="400" value="120" step="5" class="custom-range-input">
+                    <div class="slider-scale-markers">
+                        <span>10</span>
+                        <span>50 (Basic Limit)</span>
+                        <span>150 (Mid-Tier Limit)</span>
+                        <span>300+ (Grand Scale)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =====================================================
+    SECTION 2: DYNAMIC TIER CONFIGURATION MATRIX
+    ===================================================== -->
+    <section class="investment-matrix-deck">
+        <div class="pricing-container-wide">
+            <div class="pricing-cards-grid">
+                
+                <!-- Package 01: Basic Tier -->
+                <div class="pricing-card" id="tier-basic" data-max-guests="50">
+                    <div class="card-status-pill">Ideal up to 50 Guests</div>
+                    <div class="card-header-block">
+                        <h3>Basic Package</h3>
+                        <div class="price-range-display">$500 <span>– $1,500</span></div>
+                        <p>Essential curation and layout assistance for intimate milestones and small crowds.</p>
+                    </div>
+                    <div class="card-features-accordion">
+                        <div class="accordion-item active">
+                            <button class="accordion-trigger">Initial Consultation</button>
+                            <div class="accordion-content">
+                                <p>One 30-60 minute strategy session to analyze your structural event vision, aesthetic goals, and overarching theme.</p>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <button class="accordion-trigger">Basic Event Setup</button>
+                            <div class="accordion-content">
+                                <p>Simple, elegant setup for up to 50 guests. Includes standard table centerpieces, basic floral accents, and foundational linens.</p>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <button class="accordion-trigger">DIY Assistance & Checklist</button>
+                            <div class="accordion-content">
+                                <p>Professional design blueprints and custom checklists mapping out guidelines for hosts handling personal workflow components.</p>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <button class="accordion-trigger">Delivery, Setup & Breakdown</button>
+                            <div class="accordion-content">
+                                <p>Prompt drop-off, setup of rented inventory, and thorough post-event cleanup and asset teardown.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="pricing-action-cta">Book Basic Framework</a>
+                </div>
+
+                <!-- Package 02: Mid-Tier (Most Popular default focus) -->
+                <div class="pricing-card featured-focus" id="tier-mid" data-max-guests="150">
+                    <div class="card-status-pill">Ideal up to 150 Guests</div>
+                    <div class="card-header-block">
+                        <h3>Mid-Tier Package</h3>
+                        <div class="price-range-display">$1,500 <span>– $5,000</span></div>
+                        <p>Complete customized environmental design rendering and cross-vendor logistical alignments.</p>
+                    </div>
+                    <div class="card-features-accordion">
+                        <div class="accordion-item active">
+                            <button class="accordion-trigger">In-Depth Dual Consultation</button>
+                            <div class="accordion-content">
+                                <p>Two comprehensive strategy meetings (in-person or virtual) detailing deep color compositions, target layouts, and spatial styles.</p>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <button class="accordion-trigger">Custom Décor Setup & Lighting</button>
+                            <div class="accordion-content">
+                                <p>Tailored luxury setups for up to 150 guests. Upgraded table designs, detailed centerpieces, refined table linens, and atmospheric accent lighting arrays.</p>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <button class="accordion-trigger">Digital Mood Boards</button>
+                            <div class="accordion-content">
+                                <p>High-fidelity design concept lookbooks compiled by our artistic directors to help you visualize textures and themes prior to execution.</p>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <button class="accordion-trigger">Vendor Coordination & Support</button>
+                            <div class="accordion-content">
+                                <p>Direct handling of 1-2 primary design vendors (e.g., florists, heavy furniture rentals) and on-site crew presence during live modifications.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="pricing-action-cta alternative-gold">Select Mid-Tier Flow</a>
+                </div>
+
+                <!-- Package 03: Grand Full Production Tier -->
+                <div class="pricing-card" id="tier-grand" data-max-guests="400">
+                    <div class="card-status-pill">Built for 150 - 300+ Guests</div>
+                    <div class="card-header-block">
+                        <h3>Grand Package</h3>
+                        <div class="price-range-display">$5,000<span>+</span></div>
+                        <p>All-inclusive white-glove event production, luxury assets, and unlimited structural management.</p>
+                    </div>
+                    <div class="card-features-accordion">
+                        <div class="accordion-item active">
+                            <button class="accordion-trigger">Unlimited Full-Service Strategy</button>
+                            <div class="accordion-content">
+                                <p>3+ detailed consulting sessions, direct field walk-throughs at your venue, and rigorous rehearsal architectural mappings.</p>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <button class="accordion-trigger">Custom Grand Décor & Drapery</button>
+                            <div class="accordion-content">
+                                <p>Immersive designs for up to 300 guests. Elite florals, premium wall drapes, custom backdrops, complex architectural lighting, and bespoke tablescapes.</p>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <button class="accordion-trigger">Luxury Add-On Access</button>
+                            <div class="accordion-content">
+                                <p>Priority reservation of premium company holdings including signature lounge sets, chandeliers, statement treats layouts, and photo stations.</p>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <button class="accordion-trigger">All-Day Dedicated Management</button>
+                            <div class="accordion-content">
+                                <p>An assigned senior project manager and site crew on the floor through every hour of your timeline to field technical execution anomalies.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="pricing-action-cta">Commission Grand Suite</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer id="global-footer"></footer>
+
+<script src="js/he-fo.js"></script>
+
+<!-- =====================================================
+INTERACTIVE CLIENT SLIDER LOGIC 
+===================================================== -->
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const slider = document.getElementById("guest-slider");
+        const badge = document.getElementById("guest-count-badge");
+        
+        const basicCard = document.getElementById("tier-basic");
+        const midCard = document.getElementById("tier-mid");
+        const grandCard = document.getElementById("tier-grand");
+
+        // 1. Slider Threshold Engine
+        function evaluateSlider(val) {
+            badge.textContent = `${val} Guests`;
+            
+            // Clear current states
+            basicCard.classList.remove("featured-focus", "dimmed-out");
+            midCard.classList.remove("featured-focus", "dimmed-out");
+            grandCard.classList.remove("featured-focus", "dimmed-out");
+
+            if (val <= 50) {
+                basicCard.classList.add("featured-focus");
+                midCard.classList.add("dimmed-out");
+                grandCard.classList.add("dimmed-out");
+            } else if (val > 50 && val <= 150) {
+                midCard.classList.add("featured-focus");
+                basicCard.classList.add("dimmed-out");
+                grandCard.classList.add("dimmed-out");
+            } else {
+                grandCard.classList.add("featured-focus");
+                basicCard.classList.add("dimmed-out");
+                midCard.classList.add("dimmed-out");
+            }
+        }
+
+        slider.addEventListener("input", (e) => {
+            evaluateSlider(e.target.value);
+        });
+
+        // Initialize state
+        evaluateSlider(slider.value);
+
+        // 2. Micro-Accordion Mechanics
+        const accordionTriggers = document.querySelectorAll(".accordion-trigger");
+        
+        accordionTriggers.forEach(trigger => {
+            trigger.addEventListener("click", function() {
+                const currentItem = this.parentElement;
+                const siblings = currentItem.parentElement.querySelectorAll(".accordion-item");
+                
+                siblings.forEach(item => {
+                    if (item !== currentItem) {
+                        item.classList.remove("active");
+                    }
+                });
+                
+                currentItem.classList.toggle("active");
+            });
+        });
+    });
+</script>
+</body>
+</html>
