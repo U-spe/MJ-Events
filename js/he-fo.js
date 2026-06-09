@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         <li><a href="pricing.html">Pricing</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
-                   <a href="event-planner.html" class="nav-button">AI Planner</a>
+                <a href="/shop.html" class="nav-button">Make Your Event</a>
                 </div>
             </nav>
         `;
