@@ -1,12 +1,12 @@
 /*
 =====================================================
             MJ EVENTS & DESIGNS
-     Interactive Pricing Layout (pricing.css)
+     Unified Premium Pricing Framework (pricing.css)
 =====================================================
 */
 
 /* ===================================================
-   1. UTILITY CONTAINERS
+   1. UTILITY AND ROOT CONTAINER ARCHITECTURE
    =================================================== */
 .pricing-container {
     width: min(900px, 90%);
@@ -14,7 +14,7 @@
 }
 
 .pricing-container-wide {
-    width: min(1400px, 94%);
+    width: min(1300px, 92%);
     margin: 0 auto;
 }
 
@@ -29,11 +29,32 @@
     margin-bottom: 15px;
 }
 
+.section-center-intro {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 60px auto;
+}
+
+.section-center-intro h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    color: #1a3324;
+    margin: 0 0 15px 0;
+}
+
+.section-center-intro p {
+    font-family: 'Poppins', sans-serif;
+    color: #556b5c;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
 /* ===================================================
-   2. HERO HEADER & RANGE CONTROL PANEL
+   2. SECTION 1: HERO HEADER & INTERACTIVE RANGE HUD
    =================================================== */
 .pricing-hero {
-    padding: 170px 0 60px 0;
+    padding: 170px 0 50px 0;
     text-align: center;
     background: linear-gradient(180deg, rgba(47, 94, 68, 0.03) 0%, #ffffff 100%);
 }
@@ -52,18 +73,16 @@
     font-size: 1.1rem;
     line-height: 1.7;
     max-width: 650px;
-    margin: 0 auto 50px auto;
+    margin: 0 auto 40px auto;
 }
 
-/* Interactive Slider Box HUD */
 .slider-control-hub {
     background: #ffffff;
     padding: 35px 40px;
     border-radius: 24px;
-    box-shadow: 0 20px 50px rgba(26, 51, 36, 0.06);
+    box-shadow: 0 20px 50px rgba(26, 51, 36, 0.05);
     border: 1px solid rgba(47, 94, 68, 0.08);
     text-align: left;
-    margin-top: 20px;
 }
 
 .slider-label-row {
@@ -88,13 +107,12 @@
     padding: 6px 18px;
     border-radius: 30px;
     font-size: 0.95rem;
-    box-shadow: 0 4px 12px rgba(47, 94, 68, 0.25);
+    box-shadow: 0 4px 12px rgba(47, 94, 68, 0.2);
 }
 
-/* Range Input Core Restyling */
 .range-slider-wrapper {
     position: relative;
-    padding-bottom: 25px;
+    padding-bottom: 15px;
 }
 
 .custom-range-input {
@@ -107,7 +125,6 @@
     cursor: pointer;
 }
 
-/* Range Thumb Settings */
 .custom-range-input::-webkit-slider-thumb {
     -webkit-appearance: none;
     width: 24px;
@@ -115,7 +132,7 @@
     border-radius: 50%;
     background: #1a3324;
     border: 2px solid #ffffff;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
     transition: transform 0.1s ease;
 }
 
@@ -134,10 +151,10 @@
 }
 
 /* ===================================================
-   3. DECK GRID & PRICING CARD SYSTEM
+   3. SECTION 2: PRICING MAIN DECK GRID PACKAGES
    =================================================== */
 .investment-matrix-deck {
-    padding: 40px 0 120px 0;
+    padding: 20px 0 80px 0;
     background: #ffffff;
 }
 
@@ -148,13 +165,12 @@
     align-items: start;
 }
 
-/* Individual Card Structural Architecture */
 .pricing-card {
     background: #ffffff;
     border-radius: 24px;
     padding: 45px 35px;
     border: 1px solid rgba(47, 94, 68, 0.08);
-    box-shadow: 0 10px 40px rgba(26, 51, 36, 0.02);
+    box-shadow: 0 10px 40px rgba(26, 51, 36, 0.01);
     position: relative;
     transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1),
                 box-shadow 0.5s cubic-bezier(0.16, 1, 0.3, 1),
@@ -203,17 +219,15 @@
     color: #627768;
     line-height: 1.6;
     margin: 0 0 35px 0;
-    min-height: 70px; /* Aligns accordion headers visually */
+    min-height: 70px;
 }
 
-/* ===================================================
-   4. DYNAMIC INTERACTION STATES (JS Affected)
-   =================================================== */
+/* Dynamic JS Slider Hook Utility Rules */
 .pricing-card.featured-focus {
     transform: translateY(-8px);
     border-color: #2f5e44;
-    box-shadow: 0 25px 60px rgba(26, 51, 36, 0.1);
-    background: rgba(47, 94, 68, 0.01);
+    box-shadow: 0 25px 60px rgba(26, 51, 36, 0.08);
+    background: rgba(47, 94, 68, 0.005);
 }
 
 .pricing-card.featured-focus .card-status-pill {
@@ -222,27 +236,24 @@
 }
 
 .pricing-card.dimmed-out {
-    opacity: 0.55;
+    opacity: 0.5;
     transform: scale(0.98);
 }
 
-/* ===================================================
-   5. COMPACT INTERACTIVE ACCORDIONS
-   =================================================== */
+/* Card Features Micro Accordions */
 .card-features-accordion {
     border-top: 1px solid rgba(47, 94, 68, 0.1);
     margin-bottom: 40px;
 }
 
 .accordion-item {
-    border-bottom: 1px solid rgba(47, 94, 68, 0.08);
+    border-bottom: 1px solid rgba(47, 94, 68, 0.06);
 }
 
 .accordion-trigger {
     width: 100%;
     background: transparent;
     border: none;
-    outline: none;
     text-align: left;
     padding: 18px 0;
     font-family: 'Poppins', sans-serif;
@@ -253,22 +264,15 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    transition: color 0.2s ease;
 }
 
 .accordion-trigger::after {
     content: '+';
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     color: #2f5e44;
-    font-weight: 300;
     transition: transform 0.3s ease;
 }
 
-.accordion-trigger:hover {
-    color: #2f5e44;
-}
-
-/* Open Interactive States */
 .accordion-content {
     max-height: 0;
     overflow: hidden;
@@ -285,21 +289,14 @@
 }
 
 .accordion-item.active .accordion-content {
-    max-height: 150px; /* Large enough container space to prevent clipping */
-}
-
-.accordion-item.active .accordion-trigger {
-    color: #2f5e44;
-    font-weight: 600;
+    max-height: 140px;
 }
 
 .accordion-item.active .accordion-trigger::after {
-    transform: rotate(45deg); /* Forms a clean modern 'x' cancel look */
+    transform: rotate(45deg);
 }
 
-/* ===================================================
-   6. TRANSACTIONAL CALL TO ACTION BUTTONS
-   =================================================== */
+/* Core Trigger CTA Mechanics */
 .pricing-action-cta {
     font-family: 'Poppins', sans-serif;
     display: block;
@@ -313,15 +310,13 @@
     text-decoration: none;
     border: 1px solid #1a3324;
     font-size: 0.95rem;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
-    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-    margin-top: auto; /* Locks down to bottom of element bounds uniformally */
+    transition: all 0.3s ease;
+    margin-top: auto;
 }
 
 .pricing-action-cta.alternative-gold {
     background: #1a3324;
     color: #ffffff;
-    border-color: #1a3324;
 }
 
 @media (hover: hover) {
@@ -337,36 +332,376 @@
 }
 
 /* ===================================================
-   7. RESPONSIVE BREAKPOINT SYSTEM Engine
+   4. NEW SECTION 3: INTERACTIVE A LA CARTE ESTIMATOR
    =================================================== */
-@media (max-width: 1150px) {
-    .pricing-cards-grid {
-        grid-template-columns: 1fr;
-        gap: 40px;
-        max-width: 600px;
-        margin: 0 auto;
+.alacarte-estimator-section {
+    padding: 100px 0;
+    background: rgba(47, 94, 68, 0.01);
+    border-top: 1px solid rgba(47, 94, 68, 0.05);
+}
+
+.estimator-interactive-card {
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 45px;
+    border: 1px solid rgba(47, 94, 68, 0.06);
+    box-shadow: 0 15px 45px rgba(26, 51, 36, 0.03);
+}
+
+.checkbox-options-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    margin-bottom: 45px;
+}
+
+.item-checkbox-wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    cursor: pointer;
+    position: relative;
+    padding: 20px;
+    border-radius: 14px;
+    border: 1px solid rgba(47, 94, 68, 0.06);
+    background: #ffffff;
+    transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.item-checkbox-wrapper input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Bespoke Box Indicators */
+.custom-indicator {
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgba(47, 94, 68, 0.3);
+    border-radius: 6px;
+    display: inline-block;
+    flex-shrink: 0;
+    position: relative;
+    transition: all 0.25s ease;
+}
+
+.item-checkbox-wrapper input:checked ~ .custom-indicator {
+    background: #2f5e44;
+    border-color: #2f5e44;
+}
+
+.item-checkbox-wrapper input:checked ~ .custom-indicator::after {
+    content: '';
+    position: absolute;
+    left: 6px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.item-checkbox-wrapper:hover {
+    background: rgba(47, 94, 68, 0.02);
+    border-color: rgba(47, 94, 68, 0.15);
+}
+
+.checkbox-meta {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
+}
+
+.item-name {
+    font-weight: 500;
+    color: #1a3324;
+    font-size: 0.95rem;
+}
+
+.item-rate {
+    font-size: 0.85rem;
+    color: #556b5c;
+    margin-top: 4px;
+}
+
+/* Footer Calculation Dock */
+.estimator-summary-dock {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 35px;
+    border-top: 1px solid rgba(47, 94, 68, 0.1);
+}
+
+.summary-text-side span {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    color: #556b5c;
+    letter-spacing: 1px;
+}
+
+.estimated-cost-output {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #1a3324;
+    margin: 5px 0 0 0;
+}
+
+.estimator-direct-cta {
+    font-family: 'Poppins', sans-serif;
+    background: #1a3324;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 16px 35px;
+    border-radius: 50px;
+    transition: background 0.3s ease;
+}
+
+.estimator-direct-cta:hover {
+    background: #2f5e44;
+}
+
+/* ===================================================
+   5. NEW SECTION 4: LUXURY ADD-ON VISUAL SHOWCASE
+   =================================================== */
+.visual-showcase-mosaic {
+    padding: 100px 0;
+    background: #ffffff;
+}
+
+.mosaic-gallery-system {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.mosaic-item {
+    position: relative;
+    height: 380px;
+    border-radius: 20px;
+    overflow: hidden;
+    background: #1a3324;
+}
+
+.mosaic-inner-canvas {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.mosaic-asset {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Smooth Dynamic Label Curtains */
+.mosaic-label-curtain {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px;
+    background: linear-gradient(to top, rgba(26, 51, 36, 0.85) 0%, rgba(26, 51, 36, 0) 100%);
+    color: #ffffff;
+    transform: translateY(15px);
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.mosaic-label-curtain h5 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    margin: 0 0 6px 0;
+}
+
+.mosaic-label-curtain p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.75);
+    margin: 0;
+}
+
+@media (hover: hover) {
+    .mosaic-item:hover .mosaic-asset {
+        transform: scale(1.06);
     }
-    .pricing-card.dimmed-out {
-        opacity: 1; /* Turn off blurring mechanics for linear mobile scrolling profiles */
-        transform: scale(1);
-    }
-    .pricing-hero h1 {
-        font-size: 2.6rem;
+    .mosaic-item:hover .mosaic-label-curtain {
+        transform: translateY(0);
     }
 }
 
-@media (max-width: 600px) {
-    .slider-control-hub {
-        padding: 25px 20px;
+/* ===================================================
+   6. NEW SECTION 5: FAQS ACCORDION ENGINE
+   =================================================== */
+.pricing-faq-hub {
+    padding: 100px 0;
+    background: rgba(47, 94, 68, 0.01);
+    border-top: 1px solid rgba(47, 94, 68, 0.05);
+}
+
+.faq-master-accordion {
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.faq-node {
+    background: #ffffff;
+    border-radius: 12px;
+    margin-bottom: 16px;
+    border: 1px solid rgba(47, 94, 68, 0.05);
+    overflow: hidden;
+}
+
+.faq-toggle {
+    width: 100%;
+    padding: 24px;
+    background: transparent;
+    border: none;
+    text-align: left;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 1.05rem;
+    color: #1a3324;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-toggle::after {
+    content: '→';
+    font-size: 1.1rem;
+    color: #2f5e44;
+    transition: transform 0.3s ease;
+}
+
+.faq-drawer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.faq-drawer p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #556b5c;
+    padding: 0 24px 24px 24px;
+    margin: 0;
+}
+
+.faq-node.open .faq-drawer {
+    max-height: 140px;
+}
+
+.faq-node.open .faq-toggle::after {
+    transform: rotate(90deg);
+}
+
+/* ===================================================
+   7. NEW SECTION 6: CLOSING CARD BANNER
+   =================================================== */
+.pricing-closing-cta-section {
+    padding: 100px 0 120px 0;
+    background: #ffffff;
+}
+
+.curated-closing-card {
+    background: linear-gradient(135deg, #1a3324 0%, #2f5e44 100%);
+    border-radius: 32px;
+    padding: 75px 40px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.curated-closing-card h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    margin: 0 0 15px 0;
+}
+
+.curated-closing-card p {
+    font-family: 'Poppins', sans-serif;
+    max-width: 580px;
+    margin: 0 auto 30px auto;
+    font-size: 1.05rem;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.6;
+}
+
+.interactive-urgency-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.85rem;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 8px 20px;
+    border-radius: 30px;
+    margin-bottom: 35px;
+    letter-spacing: 0.5px;
+}
+
+.pulse-point {
+    width: 8px;
+    height: 8px;
+    background: #6fe09b;
+    border-radius: 50%;
+    display: inline-block;
+    animation: simplePulse 2s infinite ease-in-out;
+}
+
+.premium-solid-gold-btn {
+    font-family: 'Poppins', sans-serif;
+    background: #ffffff;
+    color: #1a3324;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 18px 40px;
+    border-radius: 50px;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.premium-solid-gold-btn:hover {
+    transform: translateY(-2px);
+}
+
+@keyframes simplePulse {
+    0%, 100% { opacity: 0.4; }
+    50% { opacity: 1; }
+}
+
+/* ===================================================
+   8. MOBILE RESPONSIVE MEDIA VIEWPORTS GRID
+   =================================================== */
+@media (max-width: 1150px) {
+    .pricing-cards-grid,
+    .checkbox-options-grid,
+    .mosaic-gallery-system {
+        grid-template-columns: 1fr;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
     }
-    .pricing-hero h1 {
-        font-size: 2.1rem;
+    .pricing-card.dimmed-out {
+        opacity: 1;
+        transform: scale(1);
     }
-    .pricing-card {
-        padding: 35px 20px;
-    }
-    .slider-scale-markers span:nth-child(2),
-    .slider-scale-markers span:nth-child(3) {
-        display: none; /* Strip internal markers for tight screens */
-    }
+    .pricing-hero h1 { font-size: 2.6rem; }
+}
+
+@media (max-width: 650px) {
+    .slider-control-hub, .estimator-interactive-card { padding: 25px 20px; }
+    .pricing-hero h1 { font-size: 2rem; }
+    .curated-closing-card h2 { font-size: 2.1rem; }
+    .estimator-summary-dock { flex-direction: column; gap: 25px; text-align: center; }
+    .slider-scale-markers span:nth-child(2), .slider-scale-markers span:nth-child(3) { display: none; }
+    .faq-toggle { font-size: 0.95rem; }
 }
