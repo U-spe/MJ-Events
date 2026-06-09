@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bespoke Event Production | MJ Events & Designs</title>
+    <meta name="description" content="Configure your custom event package. Select your tier, add premium enhancements, and submit your logistics to our design studio.">
+    
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/shop.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header id="global-header"></header>
+
+<nav class="shop-breadcrumbs">
+    <div class="shop-container">
+        <a href="index.html">Home</a> <span class="divider">/</span> 
+        <a href="shop.html">Design Studio</a> <span class="divider">/</span> 
+        <span class="current">Bespoke Event Production</span>
+    </div>
+</nav>
+
+<main class="ecom-product-layout">
+    <div class="shop-container">
+        
+        <div class="ecom-grid">
+            
+            <div class="product-media-gallery">
+                <div class="main-image-frame">
+                    <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&q=80&w=1000" alt="Luxury Event Setup Showcase" id="primary-gallery-image">
+                </div>
+                <div class="thumbnail-row">
+                    <button class="thumb-btn active"><img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&q=80&w=200" alt="Thumbnail 1"></button>
+                    <button class="thumb-btn"><img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&q=80&w=200" alt="Thumbnail 2"></button>
+                    <button class="thumb-btn"><img src="https://images.unsplash.com/photo-1478146896981-b80fe463b330?auto=format&fit=crop&q=80&w=200" alt="Thumbnail 3"></button>
+                    <button class="thumb-btn"><img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&q=80&w=200" alt="Thumbnail 4"></button>
+                </div>
+                
+                <div class="product-accordion-wrapper">
+                    <details class="product-accordion" open>
+                        <summary>The Experience</summary>
+                        <div class="accordion-content">
+                            <p>Our bespoke event production packages are designed to scale with your milestone. From intimate gatherings to grand structural executions, we handle the aesthetic blueprint, vendor coordination, and seamless execution so you can exist purely in the moment.</p>
+                        </div>
+                    </details>
+                    <details class="product-accordion">
+                        <summary>Shipping & Deployment</summary>
+                        <div class="accordion-content">
+                            <p>All packages include portal-to-portal distribution logistics within our metropolitan boundary. Venue access requirements and strict timeline load-ins will be coordinated directly with your venue management.</p>
+                        </div>
+                    </details>
+                </div>
+            </div>
+
+            <div class="product-configurator">
+                
+                <div class="product-header">
+                    <span class="vendor-tag">MJ Events & Designs</span>
+                    <h1>Bespoke Event Production</h1>
+                    <div class="dynamic-price-display" id="main-price-display">$500.00</div>
+                    <p class="tax-shipping-note">Taxes and deployment fees calculated during final review.</p>
+                </div>
+
+                <form action="https://formspree.io/f/mbdeylqw" method="POST" id="ecom-checkout-form">
+                    
+                    <div class="config-section">
+                        <div class="section-title-row">
+                            <label>Production Scale</label>
+                            <span class="selected-variant-label" id="tier-name-label">Basic Framework</span>
+                        </div>
+                        <div class="variant-pill-grid">
+                            <label class="variant-pill">
+                                <input type="radio" name="base-tier" value="Basic Package" data-base-cost="500" checked>
+                                <span class="pill-ui">Basic (50 Guests)</span>
+                            </label>
+                            <label class="variant-pill">
+                                <input type="radio" name="base-tier" value="Mid-Tier Package" data-base-cost="1500">
+                                <span class="pill-ui">Mid-Tier (150 Guests)</span>
+                            </label>
+                            <label class="variant-pill">
+                                <input type="radio" name="base-tier" value="Grand Package" data-base-cost="5000">
+                                <span class="pill-ui">Grand Suite (300+ Guests)</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="config-section">
+                        <label>Frequently Added Enhancements</label>
+                        <div class="upsell-list">
+                            
+                            <label class="upsell-card">
+                                <input type="checkbox" name="addons[]" value="Neon Sign & Floral Wall" data-addon-price="350">
+                                <div class="upsell-ui">
+                                    <div class="upsell-info">
+                                        <span class="upsell-title">Neon Sign & Floral Photo Wall</span>
+                                        <span class="upsell-price">+$350.00</span>
+                                    </div>
+                                    <div class="upsell-action-btn">Add</div>
+                                </div>
+                            </label>
+
+                            <label class="upsell-card">
+                                <input type="checkbox" name="addons[]" value="Premium Drapery Install" data-addon-price="600">
+                                <div class="upsell-ui">
+                                    <div class="upsell-info">
+                                        <span class="upsell-title">Premium Ceiling Drapery Install</span>
+                                        <span class="upsell-price">+$600.00</span>
+                                    </div>
+                                    <div class="upsell-action-btn">Add</div>
+                                </div>
+                            </label>
+
+                            <label class="upsell-card">
+                                <input type="checkbox" name="addons[]" value="Dessert Table Canopy" data-addon-price="450">
+                                <div class="upsell-ui">
+                                    <div class="upsell-info">
+                                        <span class="upsell-title">Bespoke Dessert Table Canopy</span>
+                                        <span class="upsell-price">+$450.00</span>
+                                    </div>
+                                    <div class="upsell-action-btn">Add</div>
+                                </div>
+                            </label>
+
+                            <label class="upsell-card">
+                                <input type="checkbox" name="addons[]" value="Velvet Lounge Furniture" data-addon-price="800">
+                                <div class="upsell-ui">
+                                    <div class="upsell-info">
+                                        <span class="upsell-title">Luxury Velvet Lounge Furniture Set</span>
+                                        <span class="upsell-price">+$800.00</span>
+                                    </div>
+                                    <div class="upsell-action-btn">Add</div>
+                                </div>
+                            </label>
+
+                        </div>
+                    </div>
+
+                    <div class="checkout-details-box">
+                        <h3>Event Details & Contact</h3>
+                        
+                        <div class="input-grid">
+                            <div class="input-group">
+                                <input type="text" id="client-name" name="client-name" required placeholder=" ">
+                                <label for="client-name">Full Name</label>
+                            </div>
+                            <div class="input-group">
+                                <input type="email" id="client-email" name="client-email" required placeholder=" ">
+                                <label for="client-email">Email Address</label>
+                            </div>
+                        </div>
+
+                        <div class="input-grid">
+                            <div class="input-group">
+                                <input type="date" id="event-date" name="event-date" required placeholder=" ">
+                                <label for="event-date" class="active-label">Event Date</label>
+                            </div>
+                            <div class="input-group">
+                                <input type="number" id="guest-count" name="guest-count" min="10" max="1000" required placeholder=" ">
+                                <label for="guest-count">Guest Count</label>
+                            </div>
+                        </div>
+
+                        <div class="input-group full-width">
+                            <input type="text" id="venue" name="venue" required placeholder=" ">
+                            <label for="venue">Venue Name & City</label>
+                        </div>
+
+                        <div class="input-group full-width">
+                            <textarea id="notes" name="notes" rows="3" placeholder=" "></textarea>
+                            <label for="notes">Design notes or special requests</label>
+                        </div>
+                    </div>
+
+                    <input type="hidden" name="Calculated-Total" id="hidden-total" value="$500.00">
+                    <input type="hidden" name="Selected-Addons" id="hidden-addons" value="None">
+
+                    <button type="submit" class="add-to-cart-btn" id="submit-btn">
+                        Submit Order Proposal • <span id="btn-price">$500.00</span>
+                    </button>
+                    
+                    <div class="trust-badges">
+                        <span>Secure Checkout Flow</span>
+                        <span>•</span>
+                        <span>No immediate payment required</span>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer id="global-footer"></footer>
+
+<script src="js/he-fo.js"></script>
+<script src="js/shop.js"></script>
+</body>
+</html>
