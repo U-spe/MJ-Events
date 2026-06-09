@@ -1,0 +1,192 @@
+/* Core Layout Grid System */
+.privacy-layout-wrapper {
+    padding: 140px 0 100px 0;
+    background-color: #fbfbfb;
+    min-height: 100vh;
+}
+
+.privacy-container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* Luxury Typography Hero Styles */
+.privacy-hero {
+    margin-bottom: 55px;
+}
+
+.privacy-eyebrow {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #435b66; /* Deep executive slate grey tone */
+    font-weight: 600;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.privacy-hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    color: #121212;
+    margin: 0 0 14px 0;
+    font-weight: 600;
+}
+
+.privacy-meta {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.88rem;
+    color: #888888;
+    margin: 0;
+}
+
+/* Adaptive Sidebar / Article Layout */
+.privacy-grid {
+    display: grid;
+    grid-template-columns: 290px 1fr;
+    gap: 50px;
+    align-items: flex-start;
+}
+
+/* Sticky Tracker Track */
+.privacy-sidebar {
+    position: sticky;
+    top: 120px;
+    padding: 10px 0;
+}
+
+.privacy-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-left: 2px solid #eef0f2;
+}
+
+.privacy-nav li {
+    margin-bottom: 4px;
+}
+
+.privacy-nav-link {
+    display: block;
+    padding: 8px 0 8px 22px;
+    margin-left: -2px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.92rem;
+    color: #666666;
+    text-decoration: none;
+    font-weight: 400;
+    border-left: 2px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.privacy-nav-link:hover {
+    color: #121212;
+}
+
+.privacy-nav-link.active {
+    color: #121212;
+    font-weight: 600;
+    border-left-color: #121212;
+}
+
+/* Master Copy Architecture */
+.privacy-content-body {
+    background: #ffffff;
+    border: 1px solid #eaeaea;
+    border-radius: 16px;
+    padding: 55px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.01);
+}
+
+.privacy-section {
+    margin-bottom: 50px;
+    scroll-margin-top: 130px;
+}
+
+.privacy-section:last-of-type {
+    margin-bottom: 0;
+}
+
+.privacy-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: #121212;
+    margin: 0 0 20px 0;
+    font-weight: 600;
+}
+
+.privacy-section h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #121212;
+    margin: 25px 0 12px 0;
+}
+
+.privacy-section p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+    color: #444444;
+    line-height: 1.8;
+    margin: 0 0 16px 0;
+}
+
+.privacy-section ul {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+    color: #444444;
+    line-height: 1.8;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.privacy-section li {
+    margin-bottom: 8px;
+}
+
+/* Internal Layout Cards (Sovereign Rights Section) */
+.rights-block-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    margin: 25px 0;
+}
+
+.right-card {
+    background: #fafafa;
+    border: 1px solid #eeeeee;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.right-card h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    margin: 0 0 10px 0;
+    color: #121212;
+}
+
+.right-card p {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    color: #666666;
+    margin: 0;
+}
+
+/* Structural Responsive Rules */
+@media (max-width: 992px) {
+    .privacy-grid {
+        grid-template-columns: 1fr;
+    }
+    .privacy-sidebar {
+        display: none; /* Safely clears tracking sidebar on narrower viewports */
+    }
+    .privacy-content-body {
+        padding: 35px 24px;
+    }
+    .privacy-hero h1 {
+        font-size: 2.4rem;
+    }
+}
